@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://embedblog.eu/?p=780 -->
+<html lang="en-US" data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, ::-webkit-calendar-picker-indicator, img.Wirisformula {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+iframe {
+    color-scheme: initial;
+}
+html, body {
+    background-color: #181a1b;
+}
+html, body {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<title>Building a custom ST-Link V2.1 – EmbedBlog</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="EmbedBlog » Feed" href="https://embedblog.eu/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="EmbedBlog » Comments Feed" href="https://embedblog.eu/?feed=comments-rss2">
+<link rel="alternate" type="application/rss+xml" title="EmbedBlog » Building a custom ST-Link V2.1 Comments Feed" href="https://embedblog.eu/?feed=rss2&amp;p=780">
+<script type="text/javascript" async="" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/js"></script><script async="" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/analytics.js.download"></script><script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/embedblog.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.9"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="./Building a custom ST-Link V2.1 – EmbedBlog_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Building a custom ST-Link V2.1 – EmbedBlog_files/style.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="amphibious-bootstrap-grid-css" href="./Building a custom ST-Link V2.1 – EmbedBlog_files/bootstrap-grid.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="font-awesome-5-css" href="./Building a custom ST-Link V2.1 – EmbedBlog_files/fontawesome-all.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="amphibious-fonts-css" href="./Building a custom ST-Link V2.1 – EmbedBlog_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="amphibious-style-css" href="./Building a custom ST-Link V2.1 – EmbedBlog_files/style.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<style id="amphibious-style-inline-css" type="text/css">
+.blog .byline,.archive .byline,.search .byline,.single .byline,.archive-title-control,.credits-designer { clip: rect(1px, 1px, 1px, 1px); position: absolute; }
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="katex-css" href="./Building a custom ST-Link V2.1 – EmbedBlog_files/katex.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/jquery.min.js.download" id="jquery-core-js"></script><meta name="darkreader" content="2c2a64b870ed44bf92b9f95edec0aafd"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #032029 !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #231603 !important;
+}
+.tou-6i3zyv {
+    background-color: #19576c !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+.google-material-icons {
+    font-family: 'Google Material Icons' !important;
+}
+.google-symbols {
+    font-family: 'Google Symbols Subset', 'Google Symbols' !important;
+}
+.material-icons-extended {
+    font-family: 'Material Icons Extended' !important;
+}
+mitid-authenticators-code-app > .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+.oui-icon {
+    font-family: 'Oui Icons' !important;
+}
+embed[type="application/pdf"][src="about:blank"] { filter: invert(100%) contrast(90%); }</style>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/external-tracking.min.js.download" id="ga-external-tracking-js"></script>
+<link rel="https://api.w.org/" href="https://embedblog.eu/index.php?rest_route=/"><link rel="alternate" type="application/json" href="https://embedblog.eu/index.php?rest_route=/wp/v2/posts/780"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://embedblog.eu/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://embedblog.eu/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.9">
+<link rel="canonical" href="https://embedblog.eu/?p=780">
+<link rel="shortlink" href="https://embedblog.eu/?p=780">
+<link rel="alternate" type="application/json+oembed" href="https://embedblog.eu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=https%3A%2F%2Fembedblog.eu%2F%3Fp%3D780">
+<link rel="alternate" type="text/xml+oembed" href="https://embedblog.eu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=https%3A%2F%2Fembedblog.eu%2F%3Fp%3D780&amp;format=xml">
+<link rel="pingback" href="https://embedblog.eu/xmlrpc.php">
+	
+	<!-- Google Analytics Tracking by Google Analyticator 6.5.4: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'disabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-128256351-1', 'auto');
+ 
+	ga('send', 'pageview');
+</script>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style class="darkreader darkreader--sync" media="screen"></style></head>
+<body class="post-template-default single single-post postid-780 single-format-standard has-site-branding has-wide-layout has-right-sidebar">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><div id="page" class="site-wrapper site">
+	<a class="skip-link screen-reader-text" href="https://embedblog.eu/?p=780#content">Skip to content</a>
+
+	
+<header id="masthead" class="site-header">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+
+				<div class="site-header-inside-wrapper">
+					
+<div class="site-branding-wrapper">
+	<div class="site-logo-wrapper"></div>
+	<div class="site-branding">
+					<p class="site-title"><a href="https://embedblog.eu/" title="EmbedBlog" rel="home">EmbedBlog</a></p>
+		
+				<p class="site-description">
+			STM32, AVR, ESP, … or whatever random comes to my mind		</p>
+			</div>
+</div><!-- .site-branding-wrapper -->
+
+<nav id="site-navigation" class="main-navigation">
+	<div class="main-navigation-inside">
+		<div class="toggle-menu-wrapper">
+			<a href="https://embedblog.eu/?p=780#header-menu-responsive" title="Menu" class="toggle-menu-control">
+				<span class="toggle-menu-label">Menu</span>
+			</a>
+		</div>
+
+		<div class="site-header-menu-wrapper"><ul id="menu-1" class="site-header-menu sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-19"><a href="http://embedblog.eu/">Home</a></li>
+<li id="menu-item-349" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-349"><a href="https://embedblog.eu/?p=780#" class="sf-with-ul">Large projects</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-467"><a href="https://embedblog.eu/?p=438">Open Source Multimeter</a></li>
+</ul>
+</li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="https://embedblog.eu/?page_id=9">About</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://embedblog.eu/?page_id=10">Contact</a></li>
+</ul></div>	</div><!-- .main-navigation-inside -->
+</nav><!-- .main-navigation -->
+				</div><!-- .site-header-inside-wrapper -->
+
+			</div><!-- .col -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+	<div class="site-content-inside">
+		<div class="container">
+			<div class="row">
+
+				<div id="primary" class="content-area col-16 col-sm-16 col-md-16 col-lg-11 col-xl-11 col-xxl-11">
+					<main id="main" class="site-main">
+
+						<div id="post-wrapper" class="post-wrapper post-wrapper-single post-wrapper-single-post">
+												
+							
+<div class="post-wrapper-hentry">
+	<article id="post-780" class="post-780 post type-post status-publish format-standard has-post-thumbnail hentry category-stm32 tag-programming tag-st-link tag-stm32 has-post-thumbnail-archive">
+		<div class="post-content-wrapper post-content-wrapper-single post-content-wrapper-single-post">
+
+			<div class="entry-image-wrapper-single"><figure class="post-thumbnail"><img width="1920" height="1189" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/final-1920x1189.jpg" class="img-featured img-responsive wp-post-image" alt="" srcset="https://embedblog.eu/wp-content/uploads/2021/03/final-1920x1189.jpg 1920w, https://embedblog.eu/wp-content/uploads/2021/03/final-300x186.jpg 300w, https://embedblog.eu/wp-content/uploads/2021/03/final-1024x634.jpg 1024w, https://embedblog.eu/wp-content/uploads/2021/03/final-768x476.jpg 768w, https://embedblog.eu/wp-content/uploads/2021/03/final-1536x951.jpg 1536w, https://embedblog.eu/wp-content/uploads/2021/03/final-2048x1268.jpg 2048w" sizes="(max-width: 1920px) 100vw, 1920px"></figure></div>
+			<div class="entry-data-wrapper">
+				<div class="entry-header-wrapper">
+					<header class="entry-header">
+						<h1 class="entry-title">Building a custom ST-Link V2.1</h1>					</header><!-- .entry-header -->
+
+					<div class="entry-meta entry-meta-header-after">
+						<span class="byline entry-meta-icon">by <span class="author vcard"><a class="entry-author-link url fn n" href="https://embedblog.eu/?author=1" rel="author"><span class="entry-author-name">martin</span></a></span></span><span class="posted-on entry-meta-icon"><span class="screen-reader-text">Posted on</span><a href="https://embedblog.eu/?p=780" rel="bookmark"><time class="entry-date published" datetime="2021-03-03T20:29:17+01:00">March 3, 2021</time><time class="updated" datetime="2021-03-22T14:09:28+01:00">March 22, 2021</time></a></span>					</div><!-- .entry-meta -->
+				</div><!-- .entry-header-wrapper -->
+
+				<div class="entry-content">
+					
+<p>For programming my STM32s, I’ve been using almost solely those 3-dollar USB dongles from China, which are basically ST-LINK/V2 clones. They do their basic task – programming and debugging STM32s – just fine. But they are missing two very handy features:</p>
+
+
+
+<ol><li>they do not have the SWO pins routed out (though it is possible to <a href="http://embedblog.eu/?p=673" data-type="post" data-id="673">modify those dongles</a> and replace one of the pins with the SWO)</li><li>they do not feature the VCP (Virtual Com Port), which basically enables your ST-Link to act as an USB-serial converter; ST introduced this on the ST-Link V2.1 (and then retrospectively on the V2A and B)</li><li>(also, the 2.1 has the MSD, or Mass Storage Device, functionality, which enables the ST-Link to act as an USB thumb drive and any bin files you copy into this “storage” get uploaded to any connected MCUs).</li></ol>
+
+
+
+<p>Theoretically, I could modify the hardware of my existing dongles, but since it would involve a lot of tedious work and I needed to get more programmers, I decided to instead roll a batch of my own ST-Link V2.1s.</p>
+
+
+
+<h3>Alternatives</h3>
+
+
+
+<p>Before spending a lot of time designing something new, I had a look at existing alternatives:</p>
+
+
+
+<ol><li>The relatively new, official <strong>ST-Link V3 MINI</strong>, which is sold for 10-15 USD at places like Mouser. This was a tempting choice, but I don’t like the form factor and the connector they are using. The only extra functionality this has (as far as I know) is that it can act as an USB-I2C/UART/SPI/etc. bridge.</li><li><strong>Black Magic Probe</strong> – this is an open-source ST-Link firmware alternative, which does work even on the cheap Chinese USB dongles. The advantage is that it works with any JTAG/SWD chip (not just ST’s), the disadvantages is that it’s not out-of-the-box compatible with ST’s tools (like the CubeProgrammer and IDE) – though there are relatively simple workarounds.</li></ol>
+
+
+
+<p>Anyways, in the end I decided to go the DIY route, mostly for the sake of just seeing if it will work.</p>
+
+
+
+<h3>Hardware</h3>
+
+
+
+<p>The hardware itself wasn’t hard to figure out – there are plenty of schematics available online, just make sure you have the 2.1 schematic (an easy way to tell is that it has the the renumeration transistor on the D+ USB line). The only question is which MCU to use, since it is possible to use either the STM32F103C8 with 64 kB of flash or the CB version with 128 kB. To complicate matters further, some of the C8s on the market are counterfeits with 128 kB of flash. Anyways, the difference is that if you want the VCP functionality (ie your ST-link will also work as a USB-serial adapter), you need an IC with 128 kB of flash. This is the final schematics, inspired mostly from <a rel="noreferrer noopener" href="https://i.stack.imgur.com/3ugYU.jpg" target="_blank">this picture</a>:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><a href="http://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_r10C.png" target="_blank" rel="noopener"><img loading="lazy" width="1024" height="682" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/stlink_schematics_r10C-1024x682.png" alt="" class="wp-image-785" srcset="https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_r10C-1024x682.png 1024w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_r10C-300x200.png 300w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_r10C-768x511.png 768w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_r10C-1536x1023.png 1536w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_r10C-2048x1364.png 2048w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_r10C-1920x1279.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure>
+
+
+
+<p>As you can see, I also created my own pinout for the IDC 10 connector:</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1024" height="458" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/stlink_schematics_connector-1024x458.png" alt="" class="wp-image-793" srcset="https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_connector-1024x458.png 1024w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_connector-300x134.png 300w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_connector-768x343.png 768w, https://embedblog.eu/wp-content/uploads/2021/03/stlink_schematics_connector.png 1530w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<p>This 10 pin connector has all the functionality I need – 5 V and 3.3 V for power, TPWR to measure the DUT &nbsp;voltage (or in case I ever use a level translator or isolator), both SWD pins, SWO pin, RST pin, and two UART pins. All the pins have 22R resistors as protection, I’ve also seen some people use 33R PTCs – that might be an interesting upgrade.</p>
+
+
+
+<p>I also added a USB protection IC and a jumper, which enables to you select between measuring the TPWR pin or just the 3.3 V rail. I wanted to use a PLCC4 RGB LED, but I screwed up, so I ended up using two 1206 LEDs instead – but it works just fine. This mistake is fixed in the Github repo.</p>
+
+
+
+<p>I laid out everything on a 4 layer PCB with a size of 15 x 35 mm, which is rougly the size of the clone ST-Link. Fitting everything on such a small PCB wasn’t easy, so there was no remaining space for a screw hole. Also, if you are building this, consider using a smaller crystal than the HC-49 I used – it is relatively tall and makes the casing unnecessary thick.</p>
+
+
+
+<h3>Firmware</h3>
+
+
+
+<p>This was the trickier part – ST of course does not provide the firmware, since they consider it proprietary. Basically an ST-Link has two firmware components – the bootloader and the firmware itself. One approach is to somehow copy the entire firmware from another ST-Link and upload it to the new one, but I used a different approach – I wanted to download the bootloader and then use ST’s own update utility to upload the firmware to the chip.</p>
+
+
+
+<p>So after downloading and testing countless .bin files from weird Russian sites, I finally found a <a rel="noreferrer noopener" href="https://github.com/Krakenw/Stlink-Bootloaders" target="_blank">repo on Github</a> with the bootloader for the 2.1. I uploaded the <em>Unprotected-2-1-Bootloader.bin</em> file to address 0x08000000 using another ST-Link, reconnected it from the USB and then used the old STM32 <a rel="noreferrer noopener" href="https://www.st.com/en/development-tools/stsw-link004.html" target="_blank">ST-LINK utility v4.3</a>. In the top bar I selected <em>ST-LINK</em> and then <em>firmware update</em> and this is what I got:</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="814" height="596" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/st_link_upgrade.png" alt="" class="wp-image-812" srcset="https://embedblog.eu/wp-content/uploads/2021/03/st_link_upgrade.png 814w, https://embedblog.eu/wp-content/uploads/2021/03/st_link_upgrade-300x220.png 300w, https://embedblog.eu/wp-content/uploads/2021/03/st_link_upgrade-768x562.png 768w" sizes="(max-width: 814px) 100vw, 814px"></figure>
+
+
+
+<p>The first three options are straight-forward and do fit on a 64 kB chip, while the “STM32+MSD+VCP” requires 128 kB of flash (and this is what I wanted). I still haven’t found out what the “STM32+Audio” option is for. After clicking <em>Device connect</em> and then <em>Yes</em>, the upload started and after a short while it was finished. However the uploaded firmware was not the newest one.</p>
+
+
+
+<p>I then reconnected the ST-Link again and used the firmware update utility in the STM32Prog, which did update the firmware to the newest version (it also had an option to change type to only <em>Debug + VCP</em>). So all that was left was to print a simple 3D printed case and voilà, a fully working ST-Link clone.  </p>
+
+
+
+<p>Note on ST-Link firmware names: some of those FW update tools will show you the current firmware revision in the form V2JxMySz, where Jx is the STM32 programming revision (I believe it stands for JTAG), My is for the MSD+VCP revision and Sz is for the STM8 programming… and if some of those letters are missing, you do not have that this feature programmed.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>I do consider this as a success, since it works flawlessly. All the required materials are on <a href="https://github.com/MartinD-CZ/ST-Link-V21-clone" target="_blank" rel="noreferrer noopener">my Github</a>. Having a method to create my own ST-Links either enables me to embed them into some other project or develop them further – ie I’ll probably make another revision with an optical isolation.</p>
+									</div><!-- .entry-content -->
+
+				<footer class="entry-meta entry-meta-footer">
+					<span class="cat-links cat-links-single">Posted in <a href="https://embedblog.eu/?cat=4" rel="category">STM32</a><div id="extwaiokist" style="display:none" v="fcoon" q="ec7cc452" c="706.6" i="731" u="0.963" s="04182403" sg="svr_09102316-ga_04182403-bai_04112408" d="1" w="false" e="" a="2" m="BMe=" vn="3gtra"><div id="extwaigglbit" style="display:none" v="fcoon" q="ec7cc452" c="706.6" i="731" u="0.963" s="04182403" sg="svr_09102316-ga_04182403-bai_04112408" d="1" w="false" e="" a="2" m="BMe="></div></div></span><span class="tags-links tags-links-single">Tagged <a href="https://embedblog.eu/?tag=programming" rel="tag">programming</a>, <a href="https://embedblog.eu/?tag=st-link" rel="tag">st-link</a>, <a href="https://embedblog.eu/?tag=stm32" rel="tag">STM32</a></span>				</footer><!-- .entry-meta -->
+			</div><!-- .entry-data-wrapper -->
+
+		</div><!-- .post-content-wrapper -->
+	</article><!-- #post-## -->
+</div><!-- .post-wrapper-hentry -->
+
+							
+							
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://embedblog.eu/?p=755" rel="prev"><span class="meta-nav">Prev</span> <span class="post-title">SLA-printed stencil: a whole new level</span></a></div><div class="nav-next"><a href="https://embedblog.eu/?p=804" rel="next"><span class="meta-nav">Next</span> <span class="post-title">How to automatically get Git tag into STM32CubeIDE code</span></a></div></div>
+	</nav>
+							
+<div id="comments" class="comments-area">
+
+	
+		<div class="comments-area-wrapper">
+
+		<h2 class="comments-title">
+			One Reply to “Building a custom ST-Link V2.1”		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-6445" class="comment even thread-even depth-1">
+			<article id="div-comment-6445" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/38c5e26e259b208eb367f7707c4a56b6.png" srcset="https://secure.gravatar.com/avatar/38c5e26e259b208eb367f7707c4a56b6?s=136&amp;d=mm&amp;r=g 2x" class="avatar avatar-68 photo" height="68" width="68" loading="lazy">						<b class="fn"><a href="https://github.com/lukasnee" rel="external nofollow ugc" class="url">lukasnee</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://embedblog.eu/?p=780#comment-6445"><time datetime="2023-12-21T22:55:20+01:00">December 21, 2023 at 22:55</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>just want you to know that your blog post indirectly saved my day! 😀 </p>
+<p>short story: I somehow bricked my ST-LINK/V2-1 on a nucleo board by transforming it into Jlink using SEGGER’s STLinkReflash tool (I want to use it for SystemView…). After desperate googling I stumbled upon your post section “Firmware” which helped me to bootstrap to the latest official ST-Link/V2-1 firmware and thus save some hardware!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://embedblog.eu/?p=780&amp;replytocom=6445#respond" data-commentid="6445" data-postid="780" data-belowelement="div-comment-6445" data-respondelement="respond" data-replyto="Reply to lukasnee" aria-label="Reply to lukasnee">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	</div><!-- .comments-area-wrapper -->
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://embedblog.eu/?p=780#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://embedblog.eu/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message" aria-hidden="true">Required fields are marked <span class="required" aria-hidden="true">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required" aria-hidden="true">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea></p><p class="comment-form-author"><label for="author">Name</label> <input id="author" name="author" type="text" value="" size="30" maxlength="245"></p>
+<p class="comment-form-email"><label for="email">Email</label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="780" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c841053de5"></p><p style="display: none !important;"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="1713679028543"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+												</div><!-- .post-wrapper -->
+
+					</main><!-- #main -->
+				</div><!-- #primary -->
+
+				<div id="site-sidebar" class="sidebar-area col-16 col-sm-16 col-md-16 col-lg-5 col-xl-5 col-xxl-5">
+	<div id="secondary" class="sidebar widget-area sidebar-widget-area" role="complementary">
+		<aside id="search-3" class="widget widget_search"><h2 class="widget-title">Search</h2>
+<form role="search" method="get" class="search-form" action="https://embedblog.eu/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</aside><aside id="text-3" class="widget widget_text"><h2 class="widget-title">Links</h2>			<div class="textwidget"><p><a href="https://www.tindie.com/stores/martind/">Tindie Store</a></p>
+<p><a href="https://hackaday.io/MartinD">Hackaday</a></p>
+<p><a href="https://github.com/MartinD-CZ">GitHub</a></p>
+</div>
+		</aside><aside id="categories-5" class="widget widget_categories"><h2 class="widget-title">Categories</h2>
+			<ul>
+					<li class="cat-item cat-item-12"><a href="https://embedblog.eu/?cat=12" title="My experiments with the Anet A8 3D printer">3D printing</a> (5)
+</li>
+	<li class="cat-item cat-item-32 category_item_has_children"><a href="https://embedblog.eu/?cat=32">Arduino<span class="category-toggle" aria-expanded="false"></span></a> (2)
+<ul class="children">
+	<li class="cat-item cat-item-33"><a href="https://embedblog.eu/?cat=33">Universal Battery Charging Shield</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://embedblog.eu/?cat=5" title="Projects based on the well-known 8 bit AVR platform from Atmel.">AVR</a> (5)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://embedblog.eu/?cat=13" title="Anything related to lithium-ion and lithium-polymer batteries, electrical-engineering-wise">Lithium batteries</a> (7)
+</li>
+	<li class="cat-item cat-item-91"><a href="https://embedblog.eu/?cat=91">Power Supplies</a> (1)
+</li>
+	<li class="cat-item cat-item-4 category_item_has_children"><a href="https://embedblog.eu/?cat=4" title="Projects based on the STM32 microcontrollers.">STM32<span class="category-toggle" aria-expanded="false"></span></a> (13)
+<ul class="children">
+	<li class="cat-item cat-item-30"><a href="https://embedblog.eu/?cat=30">OpenLab</a> (5)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://embedblog.eu/?cat=1">Uncategorized</a> (12)
+</li>
+	<li class="cat-item cat-item-39"><a href="https://embedblog.eu/?cat=39">Wireless</a> (6)
+</li>
+			</ul>
+
+			</aside><aside id="tag_cloud-3" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><a href="https://embedblog.eu/?tag=3d-printing" class="tag-cloud-link tag-link-38 tag-link-position-1" style="font-size: 10.964705882353pt;" aria-label="3D printing (2 items)">3D printing<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=18650" class="tag-cloud-link tag-link-14 tag-link-position-2" style="font-size: 17.058823529412pt;" aria-label="18650 (6 items)">18650<span class="tag-link-count"> (6)</span></a>
+<a href="https://embedblog.eu/?tag=action_camera" class="tag-cloud-link tag-link-26 tag-link-position-3" style="font-size: 8pt;" aria-label="action_camera (1 item)">action_camera<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=arduino" class="tag-cloud-link tag-link-34 tag-link-position-4" style="font-size: 12.941176470588pt;" aria-label="Arduino (3 items)">Arduino<span class="tag-link-count"> (3)</span></a>
+<a href="https://embedblog.eu/?tag=attiny" class="tag-cloud-link tag-link-7 tag-link-position-5" style="font-size: 12.941176470588pt;" aria-label="ATtiny (3 items)">ATtiny<span class="tag-link-count"> (3)</span></a>
+<a href="https://embedblog.eu/?tag=battery" class="tag-cloud-link tag-link-15 tag-link-position-6" style="font-size: 15.905882352941pt;" aria-label="battery (5 items)">battery<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=bm867" class="tag-cloud-link tag-link-11 tag-link-position-7" style="font-size: 8pt;" aria-label="BM867 (1 item)">BM867<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=boost" class="tag-cloud-link tag-link-21 tag-link-position-8" style="font-size: 10.964705882353pt;" aria-label="boost (2 items)">boost<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=brymen" class="tag-cloud-link tag-link-8 tag-link-position-9" style="font-size: 12.941176470588pt;" aria-label="Brymen (3 items)">Brymen<span class="tag-link-count"> (3)</span></a>
+<a href="https://embedblog.eu/?tag=c-2" class="tag-cloud-link tag-link-88 tag-link-position-10" style="font-size: 10.964705882353pt;" aria-label="c (2 items)">c<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=c" class="tag-cloud-link tag-link-87 tag-link-position-11" style="font-size: 10.964705882353pt;" aria-label="c++ (2 items)">c++<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=cc" class="tag-cloud-link tag-link-37 tag-link-position-12" style="font-size: 8pt;" aria-label="CC (1 item)">CC<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=charging" class="tag-cloud-link tag-link-19 tag-link-position-13" style="font-size: 17.882352941176pt;" aria-label="charging (7 items)">charging<span class="tag-link-count"> (7)</span></a>
+<a href="https://embedblog.eu/?tag=connector" class="tag-cloud-link tag-link-10 tag-link-position-14" style="font-size: 8pt;" aria-label="connector (1 item)">connector<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=cooling" class="tag-cloud-link tag-link-28 tag-link-position-15" style="font-size: 8pt;" aria-label="cooling (1 item)">cooling<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=dmm" class="tag-cloud-link tag-link-56 tag-link-position-16" style="font-size: 15.905882352941pt;" aria-label="DMM (5 items)">DMM<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=eagle" class="tag-cloud-link tag-link-25 tag-link-position-17" style="font-size: 10.964705882353pt;" aria-label="Eagle (2 items)">Eagle<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=esp32" class="tag-cloud-link tag-link-67 tag-link-position-18" style="font-size: 12.941176470588pt;" aria-label="ESP32 (3 items)">ESP32<span class="tag-link-count"> (3)</span></a>
+<a href="https://embedblog.eu/?tag=esp8266" class="tag-cloud-link tag-link-44 tag-link-position-19" style="font-size: 10.964705882353pt;" aria-label="esp8266 (2 items)">esp8266<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=heatsink" class="tag-cloud-link tag-link-29 tag-link-position-20" style="font-size: 8pt;" aria-label="heatsink (1 item)">heatsink<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=holder" class="tag-cloud-link tag-link-16 tag-link-position-21" style="font-size: 10.964705882353pt;" aria-label="holder (2 items)">holder<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=infrared" class="tag-cloud-link tag-link-9 tag-link-position-22" style="font-size: 8pt;" aria-label="infrared (1 item)">infrared<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=lab_equipment" class="tag-cloud-link tag-link-31 tag-link-position-23" style="font-size: 18.705882352941pt;" aria-label="lab_equipment (8 items)">lab_equipment<span class="tag-link-count"> (8)</span></a>
+<a href="https://embedblog.eu/?tag=led" class="tag-cloud-link tag-link-27 tag-link-position-24" style="font-size: 10.964705882353pt;" aria-label="LED (2 items)">LED<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=light" class="tag-cloud-link tag-link-36 tag-link-position-25" style="font-size: 8pt;" aria-label="light (1 item)">light<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=lithium-battery" class="tag-cloud-link tag-link-22 tag-link-position-26" style="font-size: 15.905882352941pt;" aria-label="lithium battery (5 items)">lithium battery<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=low-power" class="tag-cloud-link tag-link-18 tag-link-position-27" style="font-size: 10.964705882353pt;" aria-label="low-power (2 items)">low-power<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=measurement" class="tag-cloud-link tag-link-57 tag-link-position-28" style="font-size: 10.964705882353pt;" aria-label="measurement (2 items)">measurement<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=multimeter" class="tag-cloud-link tag-link-59 tag-link-position-29" style="font-size: 15.905882352941pt;" aria-label="multimeter (5 items)">multimeter<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=nrf" class="tag-cloud-link tag-link-40 tag-link-position-30" style="font-size: 10.964705882353pt;" aria-label="NRF (2 items)">NRF<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=openlab" class="tag-cloud-link tag-link-55 tag-link-position-31" style="font-size: 15.905882352941pt;" aria-label="openlab (5 items)">openlab<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=pcb" class="tag-cloud-link tag-link-24 tag-link-position-32" style="font-size: 15.905882352941pt;" aria-label="PCB (5 items)">PCB<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=programming" class="tag-cloud-link tag-link-89 tag-link-position-33" style="font-size: 15.905882352941pt;" aria-label="programming (5 items)">programming<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=protection" class="tag-cloud-link tag-link-20 tag-link-position-34" style="font-size: 8pt;" aria-label="protection (1 item)">protection<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=quick_charge" class="tag-cloud-link tag-link-70 tag-link-position-35" style="font-size: 10.964705882353pt;" aria-label="quick_charge (2 items)">quick_charge<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=radio" class="tag-cloud-link tag-link-41 tag-link-position-36" style="font-size: 8pt;" aria-label="radio (1 item)">radio<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=range" class="tag-cloud-link tag-link-42 tag-link-position-37" style="font-size: 10.964705882353pt;" aria-label="range (2 items)">range<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=relay" class="tag-cloud-link tag-link-23 tag-link-position-38" style="font-size: 8pt;" aria-label="relay (1 item)">relay<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=shield" class="tag-cloud-link tag-link-35 tag-link-position-39" style="font-size: 8pt;" aria-label="shield (1 item)">shield<span class="tag-link-count"> (1)</span></a>
+<a href="https://embedblog.eu/?tag=stm32" class="tag-cloud-link tag-link-17 tag-link-position-40" style="font-size: 22pt;" aria-label="STM32 (13 items)">STM32<span class="tag-link-count"> (13)</span></a>
+<a href="https://embedblog.eu/?tag=stm32cubeide" class="tag-cloud-link tag-link-86 tag-link-position-41" style="font-size: 10.964705882353pt;" aria-label="stm32cubeide (2 items)">stm32cubeide<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=stm32f373" class="tag-cloud-link tag-link-60 tag-link-position-42" style="font-size: 14.588235294118pt;" aria-label="STM32F373 (4 items)">STM32F373<span class="tag-link-count"> (4)</span></a>
+<a href="https://embedblog.eu/?tag=uart" class="tag-cloud-link tag-link-54 tag-link-position-43" style="font-size: 10.964705882353pt;" aria-label="UART (2 items)">UART<span class="tag-link-count"> (2)</span></a>
+<a href="https://embedblog.eu/?tag=usb" class="tag-cloud-link tag-link-62 tag-link-position-44" style="font-size: 15.905882352941pt;" aria-label="USB (5 items)">USB<span class="tag-link-count"> (5)</span></a>
+<a href="https://embedblog.eu/?tag=wireless" class="tag-cloud-link tag-link-66 tag-link-position-45" style="font-size: 10.964705882353pt;" aria-label="wireless (2 items)">wireless<span class="tag-link-count"> (2)</span></a></div>
+</aside>	</div><!-- .sidebar -->
+</div><!-- .col-* columns of main sidebar -->
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- .site-content-inside -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+		
+<div class="site-info">
+	<div class="site-info-inside">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col">
+					<div class="credits-wrapper">
+						<div class="credits credits-blog"></div><div class="credits credits-designer">Amphibious Theme by <a href="https://templatepocket.com/" title="TemplatePocket">TemplatePocket</a> <span>⋅</span> Powered by <a href="https://wordpress.org/" title="WordPress">WordPress</a></div>					</div><!-- .credits -->
+				</div><!-- .col -->
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+
+	</div><!-- .site-info-inside -->
+</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page .site-wrapper -->
+
+<div class="overlay-effect"></div><!-- .overlay-effect -->
+
+        <script>
+            function _katexRender(rootElement) {
+                const eles = rootElement.querySelectorAll(".katex-eq:not(.katex-rendered)");
+                for(let idx=0; idx < eles.length; idx++) {
+                    const ele = eles[idx];
+                    ele.classList.add("katex-rendered");
+                    try {
+                        katex.render(
+                            ele.textContent,
+                            ele,
+                            {
+                                displayMode: ele.getAttribute("data-katex-display") === 'true',
+                                throwOnError: false
+                            }
+                        );
+                    } catch(n) {
+                        ele.style.color="red";
+                        ele.textContent = n.message;
+                    }
+                }
+            }
+
+            function katexRender() {
+                _katexRender(document);
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                katexRender();
+
+                // Perform a KaTeX rendering step when the DOM is mutated.
+                const katexObserver = new MutationObserver(function(mutations) {
+                    [].forEach.call(mutations, function(mutation) {
+                        if (mutation.target && mutation.target instanceof Element) {
+                            _katexRender(mutation.target);
+                        }
+                    });
+                });
+
+                const katexObservationConfig = {
+                    subtree: true,
+                    childList: true,
+                    attributes: true,
+                    characterData: true
+                };
+
+                katexObserver.observe(document.body, katexObservationConfig);
+            });
+
+        </script>
+        <script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/enquire.js.download" id="enquire-js"></script>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/fitvids.js.download" id="fitvids-js"></script>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/hover-intent.js.download" id="hover-intent-js"></script>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/superfish.js.download" id="superfish-js"></script>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/comment-reply.min.js.download" id="comment-reply-js"></script>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/custom.js.download" id="amphibious-custom-js"></script>
+<script type="text/javascript" src="./Building a custom ST-Link V2.1 – EmbedBlog_files/katex.min.js.download" id="katex-js"></script>
+
+
+</body></html>
